@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css" />
     <title>XML Retrieval</title>
-    <script src="./javascript/retrieveXML.js" ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./javascript/retrieveXML.js" async></script>
 </head>
 <body>
+    <form>
+        <label for="fileUpload">Select an xml file to convert.</label>
+        <input id="fileUpload" type="file" accept=".xml" />
+        <button id="submit-btn" type="submit">Convert</button>
+    </form>
     <section id="cards"></section>
-    <pre id="data"></pre>
     
 </body>
 </html>
