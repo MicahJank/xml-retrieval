@@ -14,30 +14,18 @@
 //     xhttp.setRequestHeader("Content-Type", "text/xml");
 //     xhttp.send(xml);
 //   }
+
 const input = document.getElementById('fileUpload');
 const submit = document.getElementById('submit-btn');
 console.log(input)
 const upload = data => {
     // console.log("file",data)
-    fetch('http://localhost:5000', {
-        method: 'POST',
-        body: data
-        })
-        .then(res => {
-            return res.json();
-        })
-        .then(success => {
-            console.log("success", success)
-        })
-        .catch(err => {
-            console.log(err);
-        })
-    // reader.onload = function(e) {
-    //     const xml = e.target.result;
-    //     // sendXML(xml, name);
-    //     fetch('http://localhost:5000', {
+    // fetch('http://localhost:5000', {
     //     method: 'POST',
-    //     body: xml
+    //     body: data,
+    //     headers: {
+    //         'Content-Type': 'text/xml'
+    //     }
     //     })
     //     .then(res => {
     //         return res.json();
@@ -48,7 +36,23 @@ const upload = data => {
     //     .catch(err => {
     //         console.log(err);
     //     })
-    // }
+    reader.onload = function(e) {
+        const xml = e.target.result;
+        // sendXML(xml, name);
+        fetch('http://localhost:5000', {
+        method: 'POST',
+        body: xml
+        })
+        .then(res => {
+            return res.json();
+        })
+        .then(success => {
+            console.log("success", success)
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    }
     
 }
 
@@ -60,9 +64,8 @@ const onSelectFile = () => {
     let data;
     reader.onload = function(e) {
         data = e.target.result;
-    }
-
-    return upload(data);
+        return upload(data);
+    } 
 }
 
 // Add a listener on your input

@@ -9,7 +9,7 @@
     <script src="./javascript/retrieveXML.js" async></script>
 </head>
 <body>
-    <form>
+    <form id="submit-form" onsubmit="return false">
         <label for="fileUpload">Select an xml file to convert.</label>
         <input id="fileUpload" type="file" accept=".xml" />
         <button id="submit-btn" type="submit">Convert</button>
