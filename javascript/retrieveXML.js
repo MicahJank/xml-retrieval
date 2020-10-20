@@ -1,3 +1,8 @@
+// The only way i will be able to get a file loaded into the javascript dynamically is to create a backend api for this
+// i will need to create a node.js backend that and set up a route that can then take in the data that a form on the front end will send it
+// after the form sends the backend the file from the computer the backend needs to parse the data and send it back to the front end so the front end can do what it needs to with the data
+
+
 document.addEventListener('DOMContentLoaded', () => {
     let url = 'books.xml';
     fetch(url)
