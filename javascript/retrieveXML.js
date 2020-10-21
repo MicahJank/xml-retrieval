@@ -9,9 +9,17 @@ function convertXML() {
     axios.post('http://localhost:5000', formData, {
         headers: {
             "Content-Type": "multipart/form-data"
-        }
+        },
+        responseType: 'blob'
     })
     .then(res => {
+        const url = window.URL.createObjectURL(new Blob([res.data]));
+        const link = document.createElement('a');
+        link.href = url;
+        link.innerText = 'Download File'
+        link.setAttribute('download', 'json.json');
+        document.body.appendChild(link);
+        // link.click();
         console.log(res)
     })
     .catch(err => {
