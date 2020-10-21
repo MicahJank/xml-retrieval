@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css" />
     <title>XML Retrieval</title>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
     <script src="./javascript/retrieveXML.js" async></script>
 </head>
 <body>
-    <form id="submit-form" onsubmit="return false">
-        <label for="fileUpload">Select an xml file to convert.</label>
-        <input id="fileUpload" type="file" accept=".xml" />
-        <button id="submit-btn" type="submit">Convert</button>
+    <form id="submit-form" enctype="multipart/form-data" name="fileinfo">
+        <div class="input-group">
+            <div class="custom-file">
+                <label class="custom-file-label" id="fileLabel" for="fileUpload">Select an xml file to convert.</label>
+                <input class="custom-file-input" id="fileUpload" name="file" required type="file" accept=".xml, .png" />
+            </div>
+            <div class="input-group-append">
+                <input class="btn btn-outline-secondary" id="submit-btn" type="submit" value="Convert" />
+            </div>
+        </div>
     </form>
     <section id="cards"></section>
-    
-</body>
 </html>
