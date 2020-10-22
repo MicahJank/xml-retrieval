@@ -6,10 +6,21 @@
 	height: 50px;
 }
 
-.custom-file {
-	
+.download-link {
+	margin: 0 auto;
 }
 
 .custom-file-label {
 	height: 100%;
+	width: 100%;
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.jumbotron {
+	text-align: center;
 }
