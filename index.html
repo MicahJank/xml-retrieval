@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XML Retrieval</title>
+    <title>XML to JSON</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/index.css" />
@@ -11,18 +11,22 @@
     <script src="./javascript/retrieveXML.js" async></script>
 </head>
 <body>
-    <form id="submit-form" enctype="multipart/form-data" name="fileinfo">
-        <div class="input-group form-group-lg">
-            <div class="custom-file input-group-lg">
-                <input class="custom-file-input input-group-lg" id="fileUpload" name="file" required type="file" accept=".xml" />
-                <label class="custom-file-label input-group-lg" id="fileLabel" for="fileUpload">Select an xml file to convert.</label>
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to XML to JSON!</h1>
+        <p class="lead">This is a simple file converter tool that you can use for quick and easy converting of xml files into the ever popular JSON format!</p>
+        <hr class="my-4">
+        <p>To get started, simply upload your xml file and click the convert button. Then just click the download link to get back your JSON formatted xml document!</p>
+        <form id="submit-form" enctype="multipart/form-data" name="fileinfo">
+            <div class="input-group form-group-lg">
+                <div class="custom-file input-group-lg">
+                    <input class="custom-file-input input-group-lg" id="fileUpload" name="file" required type="file" accept=".xml" />
+                    <label class="custom-file-label input-group-lg" id="fileLabel" for="fileUpload">Select an xml file to convert.</label>
+                </div>
+                <div class="input-group-append input-group-lg">
+                    <input class="btn btn-primary input-group-lg" id="submit-btn" type="submit" value="Convert"  />
+                </div>
             </div>
-            <div class="input-group-append input-group-lg">
-                <input class="btn btn-outline-secondary input-group-lg" id="submit-btn" type="submit" value="Convert"  />
-            </div>
-
-            
-        </div>
+      </div>
     </form>
-    <section id="cards"></section>
+    <section class="links" id="links"></section>
 </html>
