@@ -29,7 +29,7 @@ function convertXML() {
     .catch(err => {
         console.log(err)
     })
-}
+} 
  
 
 input.addEventListener('change', (e) => {
