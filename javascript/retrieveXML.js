@@ -32,7 +32,7 @@ function convertXML() {
 } 
  
 
-input.addEventListener('change', (e) => {
+input.addEventListener('change', (e) => { 
     console.log(inputLabel)
     console.log(e.target.files[0])
     file = e.target.files[0]; 
