@@ -26,7 +26,7 @@ function convertXML() {
         console.log(res)
         inputLabel.innerText = 'Select an xml file to convert.'
     })
-    .catch(err => {
+    .catch(err => { 
         console.log(err)
     })
 } 
