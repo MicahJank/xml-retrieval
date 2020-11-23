@@ -28,7 +28,7 @@ function convertXML() {
     })
     .catch(err => { 
         console.log(err)
-    })
+    }) 
 } 
  
 
